@@ -1,0 +1,16 @@
+.main {
+    display: flex;
+}
+
+.main div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-self: center;
+    margin: 0 10px;
+}
+
+.main h5 {
+    font-size: 20px;
+    margin-bottom: 0;
+}
