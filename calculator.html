@@ -11,7 +11,7 @@
         <main class="main">
             <div class="calculator">
                 <div class="calculator-field">
-                    <p class="calculator-result">0</p>
+                    <input class="calculator-result" readonly disabled />
                 </div>
                 <ul class="calculator-btn-box">
                     <li class="calculator-btn-item">
@@ -26,7 +26,7 @@
                         <button class="calculator-btn" data-set="7">7</button>
                         <button class="calculator-btn" data-set="8">8</button>
                         <button class="calculator-btn" data-set="9">9</button>
-                        <button class="calculator-btn black" data-set="plus">
+                        <button class="calculator-btn black" data-set="+">
                             +
                         </button>
                     </li>
@@ -34,7 +34,7 @@
                         <button class="calculator-btn" data-set="4">4</button>
                         <button class="calculator-btn" data-set="5">5</button>
                         <button class="calculator-btn" data-set="6">6</button>
-                        <button class="calculator-btn black" data-set="minus">
+                        <button class="calculator-btn black" data-set="-">
                             -
                         </button>
                     </li>
@@ -42,26 +42,24 @@
                         <button class="calculator-btn" data-set="1">1</button>
                         <button class="calculator-btn" data-set="2">2</button>
                         <button class="calculator-btn" data-set="3">3</button>
-                        <button
-                            class="calculator-btn black"
-                            data-set="multiplied"
-                        >
-                            -
+                        <button class="calculator-btn black" data-set="*">
+                            *
                         </button>
                     </li>
                     <li class="calculator-btn-item">
                         <button class="calculator-btn gray large" data-set="0">
                             0
                         </button>
-                        <button class="calculator-btn gray" data-set="dot">
+                        <button class="calculator-btn gray" data-set=".">
                             .
                         </button>
-                        <button class="calculator-btn black" data-set="slash">
+                        <button class="calculator-btn black" data-set="/">
                             /
                         </button>
                     </li>
                 </ul>
             </div>
+            <p class="error-message"></p>
         </main>
         <script src="./calculator.js"></script>
     </body>
