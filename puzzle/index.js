@@ -1,5 +1,5 @@
-const YLEN = 3, // y축
-    XLEN = 3, // x축
+const YLEN = 2, // y축
+    XLEN = 2, // x축
     BLANK = 0, //빈칸 값
     boardEl = document.querySelector("#puzzleTable"),
     buttonEl = document.querySelector(".button"),
@@ -11,9 +11,8 @@ let board = [], //보드 배열
 //퍼즐 Array 생성
 function initPuzzle() {
     for (let y = 0; y < YLEN; y++) {
-        board[y] = [];
+        board[y] = []; //y열 배열 생성
 
-        console.log(board[y]);
         for (let x = 0; x < XLEN; x++) {
             let idx = y * XLEN + x;
             if (idx < blank) board[y][x] = idx + 1;
@@ -23,6 +22,8 @@ function initPuzzle() {
 
     //이동방향
     var moves = ["r", "l", "d", "u"];
+    
+    //랜덤으로 섞기
     for (let z = 0; z < 500; z++) {
         move(moves[parseInt(Math.random() * 4, 10)], false);
     }
@@ -110,12 +111,12 @@ function isEnd() {
     for (let y = 0; y < YLEN; y++) {
         for (let x = 0; x < XLEN; x++) {
             const expect = y * XLEN + x + 1;
+
             if (y * XLEN + x < YLEN * XLEN - 1) {
-                if (board[y][x] !== expect) {
-                    return;
-                }
+                if (board[y][x] !== expect) return;
             }
         }
+
     }
     clear("Clear✨");
 }
